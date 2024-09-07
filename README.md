@@ -21,3 +21,11 @@ I want to see if I enjoy building things in Scala after a little on ramp
 I'm timeboxing this work to the month - (ending 2024-10-06). I think that should
 give me enough time to get an understanding of the foundations, and build some
 sample programs
+
+---
+
+Gameplan:
+
+1. Read through the Scala 3 Book (do exercises to try and understand how it all works)
+2. Do some sort of project in Scala 3
+3. Write about experience & performance
