@@ -10,9 +10,11 @@ object HOFDemo {
     for x <- xs yield f(x)
 
   def makeCute(filepath: String | Path): String =
-     s"❤ ${filepath} ❤"
+    val len = filepath.toString.length
+    s"❤ ${filepath} ❤"
 
   def main(args: Array[String]): Unit =
+    // this feels like a little much -- so much transformation
     val dir: List[Path] = Files.list(Path.of(".")).toList.asScala.toList
     val cuteDir = map(makeCute, dir)
     println("Here's the contents of your directory")
