@@ -11,10 +11,12 @@ object HOFDemo {
 
   def makeCute(filepath: String | Path): String =
     val len = filepath.toString.length
-    s"❤ ${filepath} ❤"
+    val padding = StringBuilder()
+    val padLength = 76 - len
+    for (_ <- 0 to padLength) do padding += ' '
+    s"❤ ${filepath}${padding} ❤"
 
   def main(args: Array[String]): Unit =
-    // this feels like a little much -- so much transformation
     val dir: List[Path] = Files.list(Path.of(".")).toList.asScala.toList
     val cuteDir = map(makeCute, dir)
     println("Here's the contents of your directory")
