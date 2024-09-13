@@ -11,6 +11,6 @@ type GarbagePlate = Boolean | String | Double | Int
   val lazyList = LazyList(false, false, true, true, false, true)
   val andThisVec = Vector(2, 2, 3, 6, 7, 19)
 
-  val lookAtThisShit = lazyList.concat(more)
-  val bigPile: Vector[GarbagePlate] = andThisVec.concat(lookAtThisShit)
-  for item <- bigPile do println(s"${item}, type: ${item.getClass}")
+  val lookAtThis = lazyList.concat(more)
+  val bigPile: Vector[GarbagePlate] = andThisVec.concat(lookAtThis)
+  for item <- bigPile do println(s"${item}, type: ${item.getClass.toString.drop(16)}")
