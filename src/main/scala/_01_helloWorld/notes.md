@@ -31,3 +31,19 @@ https://get-coursier.io/docs/cli-installation
 
 ---
 
+The Scala Docs contains a page on performance characteristics of the different
+Collections available in the standard library [here](https://docs.scala-lang.org/overviews/collections-2.13/performance-characteristics.html).
+
+The scala book gives Option, Some & None as well as Try, Success, and Failure as 
+functional ways of error handling. The first set seem fairly familiar, from my little
+experience with Rust. The latter set are apparently used when you'd like to throw
+an error, though I don't believe the book gave examples.
+
+Union types `String | Boolean | Map` are a Scala 3 construct. I wonder what they used before
+... turns out they have a page for that too. It looks like you'd have to have a trait
+which two case classes could extend. 
+
+Enums can be generalized to be used as Algebraic Data Types...and when dealing with types
+in Scala it's important to talk about variance. **Producers** are typically covariant, 
+**Consumers** are typically contravariant, and types that are "both are **Invariant**
+
